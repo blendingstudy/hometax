@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Create Invoice</h2>
+<form method="POST" action="{{ url_for('invoice_bp.create_invoice') }}">
+    <!-- form fields for invoice creation -->
+    <button type="submit">Create</button>
+</form>
+{% endblock %}

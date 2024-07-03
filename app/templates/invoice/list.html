@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Invoices List</h2>
+<ul>
+    {% for invoice in invoices %}
+    <li>{{ invoice.invoice_number }} - {{ invoice.issue_date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('invoice_bp.list_invoices') }}">Invoices</a>
+        <a href="{{ url_for('cash_receipt_bp.list_cash_receipts') }}">Cash Receipts</a>
+        <a href="{{ url_for('business_status_bp.query_business_status') }}">Business Status</a>
+    </nav>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
